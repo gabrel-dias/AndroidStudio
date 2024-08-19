@@ -8,28 +8,43 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/mudarTextoButton"
+        android:id="@+id/botaoMudarTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="mudarTexto"
+        android:shadowColor="#000000"
         android:text="MUDAR TEXTO"
+        android:textColorLink="#00BCD4"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/resultado"
+        android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
         android:text="RESULTADO"
-        app:layout_constraintBottom_toTopOf="@+id/mudarTextoButton"
+        android:textColor="#FF0000"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/botaoMudarTexto" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:text="PROGRAMA"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/botaoMudarTexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

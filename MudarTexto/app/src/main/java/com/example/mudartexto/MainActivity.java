@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void mudarTexto(View view){
-        TextView texto = findViewById(R.id.resultado);
+        TextView texto = findViewById(R.id.txtResultado);
                 texto.setText("PROGRAMANDO MOBILE");
     }
 }
