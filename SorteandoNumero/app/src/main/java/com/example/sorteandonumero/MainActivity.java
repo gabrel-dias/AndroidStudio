@@ -2,6 +2,7 @@ package com.example.sorteandonumero;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,9 +25,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-    public static void sortearNumero(View view){
+    public void sortearNumero(View view){
         Random aleatorio = new Random();
         int numeroAleatorio = aleatorio.nextInt(10);
+        TextView numero = findViewById(R.id.txtNumeroSorteado);
+        numero.setText(numeroAleatorio);
 
     }
 }

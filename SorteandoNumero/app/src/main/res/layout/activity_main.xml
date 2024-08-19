@@ -8,28 +8,40 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtPrograma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="SORTEADOR DE NÚMERO"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221" />
 
     <Button
         android:id="@+id/botaoSortearNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="413dp" />
+        android:text="SORTEAR"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
 
     <TextView
         android:id="@+id/txtQualNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:text="Numero sorteado:"
-        tools:layout_editor_absoluteX="85dp"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroSorteado"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="484dp" />
 
     <TextView
@@ -37,7 +49,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="208dp"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtQualNumero"
         tools:layout_editor_absoluteY="484dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
