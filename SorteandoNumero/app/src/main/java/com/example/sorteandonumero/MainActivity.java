@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Random aleatorio = new Random();
         int numeroAleatorio = aleatorio.nextInt(10);
         TextView numero = findViewById(R.id.txtNumeroSorteado);
-        numero.setText(numeroAleatorio);
+        numero.setText(Integer.toString(numeroAleatorio));
 
     }
 }
