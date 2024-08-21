@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        System.out.println("onCreate chamado!");
     }
     public void sortearNumero(View view){
         Random aleatorio = new Random();
@@ -31,5 +32,35 @@ public class MainActivity extends AppCompatActivity {
         TextView numero = findViewById(R.id.txtNumeroSorteado);
         numero.setText(Integer.toString(numeroAleatorio));
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        System.out.println("onStart chamado!");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println("onResume chamado!");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println("onpause chamado!");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        System.out.println("onStop chamado!");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("onDestroy chamado");
     }
 }
