@@ -28,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
     }
     public void sortearNumero(View view){
         Random aleatorio = new Random();
-        int numeroAleatorio = aleatorio.nextInt(10);
+        int numeroAleatorio = aleatorio.nextInt(10)+1;
         TextView numero = findViewById(R.id.txtNumeroSorteado);
         numero.setText(Integer.toString(numeroAleatorio));
 
     }
 
+    // testando os ciclos de vida e seus callbacks
     @Override
     protected void onStart() {
         super.onStart();
