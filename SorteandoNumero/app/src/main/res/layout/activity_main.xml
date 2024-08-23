@@ -5,71 +5,61 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/download"
+    android:background="@drawable/imagem_do_whatsapp_de_2024_08_23___s__11_11_52_4f2b503f"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtPrograma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
-        android:background="#FDFDFD"
+        android:layout_marginTop="252dp"
+        android:background="#F8C972"
         android:text="NÚMEROS DE 1 A 10"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/botaoSortearNumero"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtQualNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:background="#FFFFFF"
+        android:layout_marginBottom="80dp"
+        android:background="#F1C069"
         android:text="Numero sorteado:"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/txtNumeroSorteado"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtNumeroSorteado" />
-
-    <Button
-        android:id="@+id/botaoSortearNumero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="46dp"
-        android:onClick="sortearNumero"
-        android:text="SORTEAR"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtQualNumero"
-        app:layout_constraintStart_toStartOf="@+id/txtPrograma" />
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtNumeroSorteado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="100dp"
-        android:background="#FFFFFF"
-        android:text="Clique!"
-        android:textSize="26sp"
-        android:textStyle="bold"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="80dp"
+        android:background="#F1C069"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="0dp"
-        android:layout_height="335dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
+    <Button
+        android:id="@+id/botaoSortearNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:onClick="sortearNumero"
+        android:text="SORTEAR"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sorteio" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPrograma" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
