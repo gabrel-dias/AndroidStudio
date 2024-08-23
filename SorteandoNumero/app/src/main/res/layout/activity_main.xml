@@ -5,57 +5,77 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/download"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtPrograma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SORTEADOR DE NÚMERO"
+        android:layout_marginBottom="41dp"
+        android:background="#FDFDFD"
+        android:text="NÚMEROS DE 1 A 10"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/botaoSortearNumero"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/txtQualNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:background="#FFFFFF"
         android:text="Numero sorteado:"
         android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtNumeroSorteado"
         app:layout_constraintEnd_toStartOf="@+id/txtNumeroSorteado"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/botaoSortearNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="74dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="42dp"
         android:onClick="sortearNumero"
         android:text="SORTEAR"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtNumeroSorteado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroSorteado"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrograma" />
 
     <TextView
         android:id="@+id/txtNumeroSorteado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:background="#FFFFFF"
         android:text="Clique!"
         android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtQualNumero"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txtQualNumero" />
+        app:layout_constraintStart_toEndOf="@+id/txtQualNumero"
+        app:layout_constraintTop_toBottomOf="@+id/botaoSortearNumero" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="402dp"
+        android:layout_height="406dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPrograma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sorteio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
