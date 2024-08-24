@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId = "com.tecdias.conversordemoedas"
-        minSdk = 29
-        targetSdk = 34
+        minSdk = 26
+        targetSdk = 29
         versionCode = 1
         versionName = "1.0"
 
