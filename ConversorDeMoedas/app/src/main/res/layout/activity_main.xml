@@ -8,59 +8,46 @@
     android:background="#003000"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/txtQuantiaDolar"
-        android:layout_width="188dp"
-        android:layout_height="26dp"
-        android:layout_marginBottom="54dp"
-        android:background="#FBFBFB"
-        android:ems="10"
-        android:hint="$"
-        android:inputType="number"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtResultado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomeApp" />
-
     <TextView
         android:id="@+id/txtNomeApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="219dp"
-        android:layout_marginBottom="53dp"
         android:text="DÓLAR PARA REAL"
         android:textColor="#FFFEFE"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtQuantiaDolar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="210dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="214dp"
         android:text="CONVERTER"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="470dp" />
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="53dp"
         android:text="RESULTADO"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="normal|bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/txtQuantiaDolar" />
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <EditText
+        android:id="@+id/txtQuantiaDolares"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="QUANTIA DE DÓLARES ($)"
+        android:inputType="number"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="314dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
