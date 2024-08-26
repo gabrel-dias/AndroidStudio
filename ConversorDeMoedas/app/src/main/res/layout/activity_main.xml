@@ -12,42 +12,54 @@
         android:id="@+id/txtNomeApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="73dp"
         android:text="DÓLAR PARA REAL"
         android:textColor="#FFFEFE"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtQuantiaDolares"
+        app:layout_constraintStart_toStartOf="@+id/txtQuantiaDolares" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnConverter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="165dp"
         android:text="CONVERTER"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="470dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RESULTADO"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="129dp"
+        android:text="R$ 1 = $ 5,49"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="normal|bold"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="384dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuantiaDolares" />
 
     <EditText
         android:id="@+id/txtQuantiaDolares"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="315dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="QUANTIA DE DÓLARES ($)"
         android:inputType="number"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="314dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
