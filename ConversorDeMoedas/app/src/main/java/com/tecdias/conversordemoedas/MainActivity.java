@@ -12,6 +12,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,8 +41,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // usando a cotação de: 26 de ago., 00:46 UTC · Fontes
                 double dolar = 5.49d * Double.parseDouble(txtQtdDolar.getText().toString());
-                String valorFormatado = String.format("%.2f",dolar);
-                txtQtdReal.setText("R$" + valorFormatado);
+
+                // formatando a saída com vírgula e casas decimais compatíveis
+                DecimalFormatSymbols decimalVirgula = new DecimalFormatSymbols(Locale.getDefault());
+                decimalVirgula.setDecimalSeparator(',');
+                DecimalFormat formatarValor = new DecimalFormat("#,##0.00", decimalVirgula);
+                txtQtdReal.setText(formatarValor.format(dolar));
             }
         });
     }
