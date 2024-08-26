@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 DecimalFormatSymbols decimalVirgula = new DecimalFormatSymbols(Locale.getDefault());
                 decimalVirgula.setDecimalSeparator(',');
                 DecimalFormat formatarValor = new DecimalFormat("#,##0.00", decimalVirgula);
-                txtQtdReal.setText(formatarValor.format(dolar));
+                txtQtdReal.setText("R$" + formatarValor.format(dolar));
             }
         });
     }
