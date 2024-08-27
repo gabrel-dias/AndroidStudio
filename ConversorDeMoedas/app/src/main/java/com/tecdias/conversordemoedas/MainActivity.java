@@ -39,14 +39,18 @@ public class MainActivity extends AppCompatActivity {
         btnConverterReal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // usando a cotação de: 26 de ago., 00:46 UTC · Fontes
-                double dolar = 5.49d * Double.parseDouble(txtQtdDolar.getText().toString());
+                if (txtQtdDolar.length() == 0) {
+                    txtQtdReal.setText("INSIRA UM VALOR NO CAMPO");
+                } else {
+                    // usando a cotação de: 26 de ago., 00:46 UTC · Fontes
+                    double dolar = 5.49d * Double.parseDouble(txtQtdDolar.getText().toString());
 
-                // formatando a saída com vírgula e casas decimais compatíveis
-                DecimalFormatSymbols decimalVirgula = new DecimalFormatSymbols(Locale.getDefault());
-                decimalVirgula.setDecimalSeparator(',');
-                DecimalFormat formatarValor = new DecimalFormat("#,##0.00", decimalVirgula);
-                txtQtdReal.setText("R$" + formatarValor.format(dolar));
+                    // formatando a saída com vírgula e casas decimais compatíveis
+                    DecimalFormatSymbols decimalVirgula = new DecimalFormatSymbols(Locale.getDefault());
+                    decimalVirgula.setDecimalSeparator(',');
+                    DecimalFormat formatarValor = new DecimalFormat("#,##0.00", decimalVirgula);
+                    txtQtdReal.setText("R$" + formatarValor.format(dolar));
+                }
             }
         });
     }
