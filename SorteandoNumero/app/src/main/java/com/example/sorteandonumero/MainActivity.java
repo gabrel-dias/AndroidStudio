@@ -26,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
         });
         System.out.println("onCreate chamado!");
     }
-    public void sortearNumero(View view){
+
+    public void sortearNumero(View view) {
         Random aleatorio = new Random();
-        int numeroAleatorio = aleatorio.nextInt(10)+1;
+        // gera um número aleatório de 0 (inclusivo) até o limite do range escolhido (exclusivo, ou seja -1. por isso é preciso colocar um a mais no range)
+        int numeroAleatorio = aleatorio.nextInt(11);
         TextView numero = findViewById(R.id.txtNumeroSorteado);
         numero.setText(Integer.toString(numeroAleatorio));
 
