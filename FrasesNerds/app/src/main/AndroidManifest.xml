@@ -13,7 +13,6 @@
         android:theme="@style/Theme.FrasesNerds"
         tools:targetApi="31">
         <activity
-            android:screenOrientation="locked"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
