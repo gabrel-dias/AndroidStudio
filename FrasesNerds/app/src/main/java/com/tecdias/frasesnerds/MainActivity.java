@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
                 };
                 // criando uma chave inteira aleatória entre a quantidade mínima e máxima disponíveis no map, e assim poder resgatar um valor do mesmo
                 Random valor = new Random();
-                int valorTeste = valor.nextInt(11);
+                int valorTeste = valor.nextInt(10);
                 frase.setText(mapFrasesGeradas.get(valorTeste));
-                System.out.println(valor);
+                System.out.println(valorTeste);
             }
         });
 
