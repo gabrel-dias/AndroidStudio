@@ -45,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
         // relacionando os elementos do Java aos da interface gráfica
         Button gerarFrase = findViewById(R.id.btnGerar);
         TextView frase = findViewById(R.id.txtFrase);
-        // deixando a frase inicial sem visibilidade
+
+        // deixando as frases inicias sem visibilidade
         frase.setVisibility(View.INVISIBLE);
+
         // efeito do botão quando clicado
         gerarFrase.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,12 +69,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
 
-                // usando Random para criar uma chave aleatória e poder resgatar um valor contido no map
-                Random valor = new Random();
                 // deixando a frase visível
                 frase.setVisibility(View.VISIBLE);
-                frase.setText(mapFrasesGeradas.get(valor.nextInt(10)));
 
+                // usando Random para criar uma chave aleatória e poder resgatar um valor contido no map
+                Random valor = new Random();
+                int valorGerado = valor.nextInt(10);
+                frase.setText(mapFrasesGeradas.get(valorGerado));
             }
         });
 
