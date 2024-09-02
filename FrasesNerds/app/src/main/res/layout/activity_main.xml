@@ -35,21 +35,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtFrase"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:gravity="center"
-        android:text="FRASE GERADA VAI APARECER AQUI!!"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+    <ImageView
+        android:id="@+id/balao"
+        android:layout_width="624dp"
+        android:layout_height="393dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/balaofala" />
+
+    <TextView
+        android:id="@+id/txtFrase"
+        android:layout_width="348dp"
+        android:layout_height="175dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center|center_horizontal"
+        android:text="FRASE GERADA VAI APARECER AQUI!!"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="@+id/balao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/balao"
+        app:layout_constraintVertical_bias="0.281" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
