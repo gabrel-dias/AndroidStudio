@@ -12,12 +12,12 @@
         android:id="@+id/txtNomeApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="90dp"
-        android:fontFamily="sans-serif"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-black"
         android:text="Frases Nerds"
         android:textColor="#F2CB57"
-        android:textSize="60sp"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,22 +26,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#F4CE5A"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif-medium"
         android:text="GERAR FRASE"
         android:textColor="#F25D27"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
 
     <TextView
         android:id="@+id/txtFrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="219dp"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="FRASE GERADA VAI APARECER AQUI!!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         // relacionando os elementos do Java aos da interface gráfica
         Button gerarFrase = findViewById(R.id.btnGerar);
         TextView frase = findViewById(R.id.txtFrase);
-
+        // deixando a frase inicial sem visibilidade
+        frase.setVisibility(View.INVISIBLE);
         // efeito do botão quando clicado
         gerarFrase.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,23 +54,24 @@ public class MainActivity extends AppCompatActivity {
                 // criando um HashMap com 10 frases
                 Map<Integer, String> mapFrasesGeradas = new HashMap() {
                     {
-                        put(0, "Bazinga! (The Big Bang Theory)");
-                        put(1, "Não entre em pânico. (Guia do Mochileiro das Galáxias)");
-                        put(2, "Que a Força esteja com você! (Star Wars)");
-                        put(3, "Com grandes poderes, vem grandes responsabilidades. (Homem-Aranha)");
-                        put(4, "O inverno está chegando. (Game of Thrones)");
-                        put(5, "São as nossas escolhas, Harry, que revelam o que realmente somos, muito mais do que as nossas qualidades. (Harry Potter)");
-                        put(6, "A mente é uma coisa frágil. Basta a mínima coisa para ir na direção errada. (X-Men)");
-                        put(7, "Não brinque com o nerd de sua turma, pois um dia ele pode ser seu chefe. (Bill Gates)");
-                        put(8, "It's bigger on the inside! (Qualquer um ao entrar na TARDIS pela primeira vez em Doctor Who)");
-                        put(9, "One ring to rule them all (Senhor dos Anéis)");
+                        put(0, "\"Seu futuro não está escrito, o de ninguém está. Você pode fazer o que quiser fazer.\"\n(De Volta Para o Futuro)");
+                        put(1, "\"Não entre em pânico!\"\n(Guia do Mochileiro das Galáxias)");
+                        put(2, "\"Que a Força esteja com você!\"\n(Star Wars)");
+                        put(3, "\"Com grandes poderes, vem grandes responsabilidades.\"\n(Homem-Aranha)");
+                        put(4, "\"O inverno está chegando.\"\n(Game of Thrones)");
+                        put(5, "\"Não são as nossas qualidades, mas sim as nossas escolhas que revelam quem nós somos.\"\n (Harry Potter)");
+                        put(6, "\"Existe sempre uma solução.\"\n(Doctor Who)");
+                        put(7, "\"Não deixe os trouxas te colocarem para baixo.\"\n(Harry Potter)");
+                        put(8, "\"It's bigger on the inside!\"\n(Qualquer um ao entrar na TARDIS pela primeira vez em Doctor Who)");
+                        put(9, "\"One ring to rule them all.\"\n(Senhor dos Anéis)");
                     }
                 };
-                // criando uma chave inteira aleatória entre a quantidade mínima e máxima disponíveis no map, e assim poder resgatar um valor do mesmo
+                // usando Random para criar uma chave aleatória e poder resgatar um valor contido no map
                 Random valor = new Random();
-                int valorTeste = valor.nextInt(10);
-                frase.setText(mapFrasesGeradas.get(valorTeste));
-                System.out.println(valorTeste);
+                // deixando a frase visível
+                frase.setVisibility(View.VISIBLE);
+                frase.setText(mapFrasesGeradas.get(valor.nextInt(10)));
+
             }
         });
 
