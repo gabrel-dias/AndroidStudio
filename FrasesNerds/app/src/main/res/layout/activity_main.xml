@@ -6,61 +6,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1F67A6"
+    android:outlineSpotShadowColor="#1F67A5"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/txtNomeApp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Frases Nerds"
-        android:textColor="#F2CB57"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnGerar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#F4CE5A"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#ffff"
         android:fontFamily="sans-serif-medium"
         android:text="GERAR FRASE"
-        android:textColor="#F25D27"
-        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951"
+        app:strokeColor="#000000"
+        app:strokeWidth="3dp" />
 
     <ImageView
         android:id="@+id/balao"
-        android:layout_width="624dp"
-        android:layout_height="393dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="483dp"
+        android:layout_height="304dp"
+        android:layout_marginBottom="228dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/balaofala" />
 
     <TextView
         android:id="@+id/txtFrase"
-        android:layout_width="348dp"
-        android:layout_height="175dp"
+        android:layout_width="270dp"
+        android:layout_height="149dp"
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="center|center_horizontal"
         android:text="FRASE GERADA VAI APARECER AQUI!!"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#000000"
-        android:textSize="27sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/balao"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/balao"
-        app:layout_constraintVertical_bias="0.281" />
+        app:layout_constraintVertical_bias="0.251" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="380dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/titulo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
