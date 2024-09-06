@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 double peso = Double.parseDouble(txtPeso.getText().toString());
                 double imc = peso / (Math.pow(altura, 2));
 
-                DecimalFormatSymbols virgula = new DecimalFormatSymbols(Locale.getDefault());
+                DecimalFormatSymbols virgula = new DecimalFormatSymbols(new Locale("pt","BR"));
                 DecimalFormat formatador = new DecimalFormat("#,##0.00", virgula);
 
                 resultadoIMC.setText(formatador.format(imc));
