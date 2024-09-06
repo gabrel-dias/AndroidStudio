@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -47,6 +48,7 @@
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:textSize="48sp"
         tools:layout_editor_absoluteX="76dp"
@@ -56,9 +58,18 @@
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:text="CALCULAR"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="638dp" />
+
+    <TextView
+        android:id="@+id/txtClassificacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Seu IMC é classificado como: "
+        android:textSize="24sp" />
 
 </LinearLayout>

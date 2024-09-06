@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         TextView txtAltura = findViewById(R.id.txtAltura);
         TextView txtPeso = findViewById(R.id.txtPeso);
         TextView resultadoIMC = findViewById(R.id.txtResultado);
+        TextView classificacao = findViewById(R.id.txtClassificacao);
+        classificacao.setVisibility(View.INVISIBLE);
 
         botaoCalculo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +45,22 @@ public class MainActivity extends AppCompatActivity {
                 DecimalFormat formatador = new DecimalFormat("#,##0.00", virgula);
 
                 resultadoIMC.setText(formatador.format(imc));
+
+
+        classificacao.setVisibility(View.VISIBLE);
+                if (imc <= 18.5d) {
+                    classificacao.setText("Seu IMC foi classificado como: \"Baixo peso\"");
+                } else if (imc > 18.d && imc <= 24.9d) {
+                    classificacao.setText("Seu IMC foi classificado como: \"Eutrofia (peso adequado)\"");
+                } else if (imc > 25d && imc <= 29.d) {
+                    classificacao.setText("Seu IMC foi classificado como: \"Sobrepeso\"");
+                } else if (imc > 30d && imc <= 34.9) {
+                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 1\"");
+                } else if (imc > 35d && imc <= 39.9d) {
+                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 2\"");
+                }
+                else
+                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Extrema\"");
             }
         });
     }
