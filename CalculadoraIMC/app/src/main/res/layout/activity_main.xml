@@ -68,7 +68,9 @@
         android:id="@+id/txtClassificacao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
         android:text="Seu IMC é classificado como: "
         android:textSize="24sp" />
 
