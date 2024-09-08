@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox homem = findViewById(R.id.homem);
         CheckBox mulher = findViewById(R.id.mulher);
-        TextView texto = findViewById(R.id.textView);
+        TextView texto = findViewById(R.id.txtRadio);
 
         homem.setOnClickListener(new View.OnClickListener() {
             @Override
