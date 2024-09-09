@@ -12,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculadoraIMC"
         tools:targetApi="31">
-        <activity
-            android:name=".tabela"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
