@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/balaofala" />
+        app:srcCompat="@drawable/balaoFala" />
 
     <TextView
         android:id="@+id/txtFrase"

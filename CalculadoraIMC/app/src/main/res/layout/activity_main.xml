@@ -9,26 +9,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="IMC"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="32dp" />
-
     <EditText
         android:id="@+id/txtPeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:height="50dp"
         android:ems="10"
         android:hint="Digite o seu peso"
         android:inputType="number|numberDecimal"
+        android:textColorHint="#9A000000"
         tools:layout_editor_absoluteX="186dp"
         tools:layout_editor_absoluteY="122dp" />
 
@@ -36,23 +27,15 @@
         android:id="@+id/txtAltura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:height="50dp"
         android:ems="10"
         android:hint="Digite a sua altura"
         android:inputType="number|numberDecimal"
+        android:textColorHint="#9A000000"
         tools:layout_editor_absoluteX="186dp"
         tools:layout_editor_absoluteY="221dp" />
-
-    <TextView
-        android:id="@+id/txtResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:textSize="48sp"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="495dp" />
 
     <Button
         android:id="@+id/btnCalcular"
@@ -64,14 +47,39 @@
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="638dp" />
 
+    <ImageView
+        android:id="@+id/formula"
+        android:layout_width="252dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/formula_imc" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="Valor IMC"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="495dp" />
+
     <TextView
         android:id="@+id/txtClassificacao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="Seu IMC é classificado como: "
+        android:text="Classificação do IMC"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnTabela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver tabela" />
 
 </LinearLayout>

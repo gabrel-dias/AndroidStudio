@@ -1,8 +1,6 @@
-package com.example.sorteandonumero;
+package com.tecdias.calculadoraimc;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,29 +8,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.Random;
-
-public class MainActivity extends AppCompatActivity {
+public class tabela extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_tabela);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
-
-    public void sortearNumero(View view) {
-        Random aleatorio = new Random();
-        // gera um número aleatório de 0 (inclusivo) até o limite do range escolhido (exclusivo, ou seja -1. por isso é preciso colocar um a mais no range)
-        int numeroAleatorio = aleatorio.nextInt(11);
-        TextView numero = findViewById(R.id.txtNumeroSorteado);
-        numero.setText(Integer.toString(numeroAleatorio));
-
-    }
-
 }
