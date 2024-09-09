@@ -34,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
         TextView resultadoIMC = findViewById(R.id.txtResultado);
         TextView classificacao = findViewById(R.id.txtClassificacao);
         ImageView formula = findViewById(R.id.formula);
+        Button tabela = findViewById(R.id.btnTabela);
 
         classificacao.setVisibility(View.INVISIBLE);
         resultadoIMC.setVisibility(View.INVISIBLE);
-
+        tabela.setVisibility(View.INVISIBLE);
         botaoCalculo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 formula.setVisibility(View.INVISIBLE);
                 classificacao.setVisibility(View.VISIBLE);
+                tabela.setVisibility(View.VISIBLE);
                 if (imc <= 18.5d) {
                     classificacao.setText("Seu IMC foi classificado como: \"Baixo peso\"");
                 } else if (imc > 18.d && imc <= 24.9d) {
