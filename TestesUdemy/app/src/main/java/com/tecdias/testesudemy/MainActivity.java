@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,17 +31,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        CheckBox homem = findViewById(R.id.homem);
-        CheckBox mulher = findViewById(R.id.mulher);
-        TextView texto = findViewById(R.id.txtCheckbox);
+        ConstraintLayout layout = findViewById(R.id.constraint);
+
+
         RadioGroup radioGroup = findViewById(R.id.radioCores);
         RadioButton azul = findViewById(R.id.azul);
         RadioButton vermelho = findViewById(R.id.vermelho);
         RadioButton verde = findViewById(R.id.verde);
         Button btnmudaCor = findViewById(R.id.buttonMudaCor);
-        ConstraintLayout layout = findViewById(R.id.constraint);
-
-
         // testando os radioButtons
         btnmudaCor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        CheckBox homem = findViewById(R.id.homem);
+        CheckBox mulher = findViewById(R.id.mulher);
+        TextView texto = findViewById(R.id.txtCheckbox);
         // testando as checkboxes
         homem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +79,17 @@ public class MainActivity extends AppCompatActivity {
                     texto.setText("Escolha um sexo");
                 }
 
+            }
+        });
+
+        //testando toggle buttons
+        ToggleButton toggleButton = findViewById(R.id.toggleButton);
+        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (toggleButton.isChecked()){
+                    layout.setBackgroundColor(Color.BLACK);
+                } else layout.setBackgroundColor(Color.CYAN);
             }
         });
     }
