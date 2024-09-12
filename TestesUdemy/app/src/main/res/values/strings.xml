@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TestesUdemy</string>
+    <string-array name="paises">
+        <item>Brasil</item>
+        <item>USA</item>
+        <item>Portugal</item>
+        <item>México</item>
+        <item>França</item>
+    </string-array>
 </resources>

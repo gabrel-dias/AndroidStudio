@@ -3,11 +3,13 @@ package com.tecdias.testesudemy;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -17,6 +19,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,10 +91,32 @@ public class MainActivity extends AppCompatActivity {
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (toggleButton.isChecked()){
+                if (toggleButton.isChecked()) {
                     layout.setBackgroundColor(Color.BLACK);
                 } else layout.setBackgroundColor(Color.CYAN);
             }
         });
+
+        // testando spinners + adaptadores
+        Spinner spnPaises = findViewById(R.id.spinnerPaises);
+        TextView pais = findViewById(R.id.txtPais);
+
+        // para linkar um array de strings que está presente no arquivo XML a um spinner, é preciso utilizar um adaptador
+        // DataSourse <--> Adapter <--> AdapterView
+
+        // DataSourse = Cursor, Arraylist;
+        // Adapter View = List View, Grid View, Spinner.
+
+        ArrayAdapter adaptador = ArrayAdapter.createFromResource(this, R.array.paises, android.R.layout.simple_spinner_item);
+        // usando o método createFromResource() é preciso fornecer 3 parâmetros:
+        // context – em que contexto ele será utilizado e será nessa classe (this);
+        // textArrayResId – o identificador do array que será usado como código, usando o nome desse array que está XML;
+        // textViewResId – o identificador do layout que será usado para criar a visualização, em outras palavras é como o item irá aparecer dentro do spínner.
+
+        // após isso, é preciso "criar" um layout dentro desse spínner, setando o mesmo como dropdown
+        adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnPaises.setAdapter(adaptador);
+        // TODO spnPaises.setOnItemSelectedListener();
+
     }
 }
