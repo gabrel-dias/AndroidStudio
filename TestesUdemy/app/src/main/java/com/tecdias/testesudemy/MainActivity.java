@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -19,8 +18,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout layout = findViewById(R.id.constraint);
 
 
-        RadioGroup radioGroup = findViewById(R.id.radioCores);
         RadioButton azul = findViewById(R.id.azul);
         RadioButton vermelho = findViewById(R.id.vermelho);
         RadioButton verde = findViewById(R.id.verde);
@@ -57,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox homem = findViewById(R.id.homem);
         CheckBox mulher = findViewById(R.id.mulher);
-        TextView texto = findViewById(R.id.txtCheckbox);
+        TextView texto = findViewById(R.id.txtCheckboxSexo);
         // testando as checkboxes
         homem.setOnClickListener(new View.OnClickListener() {
             @Override
