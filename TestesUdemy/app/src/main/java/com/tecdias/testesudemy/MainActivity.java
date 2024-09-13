@@ -3,6 +3,7 @@ package com.tecdias.testesudemy;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -112,7 +113,19 @@ public class MainActivity extends AppCompatActivity {
         // após isso, é preciso "criar" um layout dentro desse spínner, setando o mesmo como dropdown
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnPaises.setAdapter(adaptador);
-        // TODO spnPaises.setOnItemSelectedListener();
+        TextView paisTexto = findViewById(R.id.txtPais);
+        spnPaises.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String pais = parent.getItemAtPosition(position).toString();
+                paisTexto.setText(pais);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 }
