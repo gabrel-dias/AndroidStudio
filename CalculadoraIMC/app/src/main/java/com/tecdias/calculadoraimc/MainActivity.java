@@ -33,24 +33,24 @@ public class MainActivity extends AppCompatActivity {
         TextView txtPeso = findViewById(R.id.txtPeso);
         TextView resultadoIMC = findViewById(R.id.txtResultado);
         TextView classificacao = findViewById(R.id.txtClassificacao);
-        ImageView formula = findViewById(R.id.formula);
         classificacao.setVisibility(View.INVISIBLE);
         resultadoIMC.setVisibility(View.INVISIBLE);
         Button btnTabela = findViewById(R.id.btnTabela);
-
         btnTabela.setVisibility(View.INVISIBLE);
         botaoCalculo.setOnClickListener(new View.OnClickListener() {
+double imc;
             @Override
             public void onClick(View v) {
                 try {
                 double altura = Double.parseDouble(txtAltura.getText().toString());
                 double peso = Double.parseDouble(txtPeso.getText().toString());
-                double imc = peso / (Math.pow(altura, 2));
+                imc = peso / (Math.pow(altura, 2));
                 DecimalFormatSymbols virgula = new DecimalFormatSymbols(new Locale("pt", "BR"));
                 DecimalFormat formatador = new DecimalFormat("#,##0.00", virgula);
                 resultadoIMC.setText(formatador.format(imc));
-
+                    resultadoIMC.setVisibility(View.VISIBLE);
                 } catch (NumberFormatException e){
+                    resultadoIMC.setVisibility(View.VISIBLE);
                     resultadoIMC.setText("Por favor, preencha os dois campos acima!");
                 }
 
