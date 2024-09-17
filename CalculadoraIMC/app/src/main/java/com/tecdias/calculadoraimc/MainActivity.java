@@ -42,29 +42,32 @@ public class MainActivity extends AppCompatActivity {
         botaoCalculo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
                 double altura = Double.parseDouble(txtAltura.getText().toString());
                 double peso = Double.parseDouble(txtPeso.getText().toString());
                 double imc = peso / (Math.pow(altura, 2));
-
                 DecimalFormatSymbols virgula = new DecimalFormatSymbols(new Locale("pt", "BR"));
                 DecimalFormat formatador = new DecimalFormat("#,##0.00", virgula);
-
                 resultadoIMC.setText(formatador.format(imc));
 
-                formula.setVisibility(View.INVISIBLE);
+                } catch (NumberFormatException e){
+                    resultadoIMC.setText("Por favor, preencha os dois campos acima!");
+                }
+
+
                 classificacao.setVisibility(View.VISIBLE);
-                if (imc <= 18.5d) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Baixo peso\"");
-                } else if (imc > 18.d && imc <= 24.9d) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Eutrofia (peso adequado)\"");
-                } else if (imc > 25d && imc <= 29.d) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Sobrepeso\"");
-                } else if (imc > 30d && imc <= 34.9) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 1\"");
-                } else if (imc > 35d && imc <= 39.9d) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 2\"");
-                } else
-                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Extrema\"");
+                    if (imc <= 18.5d) {
+                        classificacao.setText("Seu IMC foi classificado como: \"Baixo peso\"");
+                    } else if (imc > 18.d && imc <= 24.9d) {
+                        classificacao.setText("Seu IMC foi classificado como: \"Eutrofia (peso adequado)\"");
+                    } else if (imc > 25d && imc <= 29.d) {
+                        classificacao.setText("Seu IMC foi classificado como: \"Sobrepeso\"");
+                    } else if (imc > 30d && imc <= 34.9) {
+                        classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 1\"");
+                    } else if (imc > 35d && imc <= 39.9d) {
+                        classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 2\"");
+                    } else
+                        classificacao.setText("Seu IMC foi classificado como: \"Obesidade Extrema\"");
             }
         });
     }
