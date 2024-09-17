@@ -1,5 +1,6 @@
 package com.tecdias.calculadoraimc;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,12 +40,14 @@ public class MainActivity extends AppCompatActivity {
         btnTabela.setVisibility(View.INVISIBLE);
         botaoCalculo.setOnClickListener(new View.OnClickListener() {
             double imc;
+            double altura;
+            double peso;
 
             @Override
             public void onClick(View v) {
                 try {
-                    double altura = Double.parseDouble(txtAltura.getText().toString());
-                    double peso = Double.parseDouble(txtPeso.getText().toString());
+                    altura = Double.parseDouble(txtAltura.getText().toString());
+                    peso = Double.parseDouble(txtPeso.getText().toString());
                     imc = peso / (Math.pow(altura, 2));
                     DecimalFormatSymbols virgula = new DecimalFormatSymbols(new Locale("pt", "BR"));
                     DecimalFormat formatador = new DecimalFormat("#,##0.00", virgula);
@@ -54,8 +57,15 @@ public class MainActivity extends AppCompatActivity {
                     resultadoIMC.setVisibility(View.VISIBLE);
                     resultadoIMC.setText("Por favor, preencha os dois campos acima!");
                 }
+                // verifica se algum dos campos ficou vazio, se sim a classificação do IMC não ficará visível na
+                if (altura == 0 || peso == 0) {
+                    classificacao.setVisibility(View.INVISIBLE);
 
-                classificacao.setVisibility(View.VISIBLE);
+                } else {
+                    classificacao.setVisibility(View.VISIBLE);
+                    btnTabela.setVisibility(View.VISIBLE);
+                }
+
                 if (imc <= 18.5d) {
                     classificacao.setText("Seu IMC foi classificado como: \"Baixo peso\"");
                 } else if (imc > 18.d && imc <= 24.9d) {
@@ -68,6 +78,13 @@ public class MainActivity extends AppCompatActivity {
                     classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 2\"");
                 } else
                     classificacao.setText("Seu IMC foi classificado como: \"Obesidade Extrema\"");
+            }
+        });
+        btnTabela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaTabela = new Intent(MainActivity.this, TelaTabela.class);
+                startActivity(telaTabela);
             }
         });
     }
