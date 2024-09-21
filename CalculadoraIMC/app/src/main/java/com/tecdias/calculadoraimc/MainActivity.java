@@ -3,11 +3,8 @@ package com.tecdias.calculadoraimc;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,10 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     peso = Double.parseDouble(txtPeso.getText().toString());
                     imc = (int) Math.floor(peso / (Math.pow(altura, 2)));
 
-                    resultadoIMC.setText(Integer.toString(imc));
+                    resultadoIMC.setText("Seu IMC é: " + Integer.toString(imc));
                     resultadoIMC.setVisibility(View.VISIBLE);
                 } catch (NumberFormatException e) {
                     resultadoIMC.setVisibility(View.VISIBLE);
@@ -71,22 +64,23 @@ public class MainActivity extends AppCompatActivity {
 
                 // condicionais para classificação do IMC
                 if (imc <= 18) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Baixo peso\"");
+                    classificacao.setText("Baixo peso");
                     classificacao.setTextColor(Color.parseColor("#63CAF2"));
 
                 } else if (imc >= 20 && imc <= 24) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Peso Normal\"");
+                    classificacao.setText("Peso Normal");
                     classificacao.setTextColor(Color.parseColor("#3098F2"));
 
                 } else if (imc >= 25 && imc <= 29) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Excesso de peso\"");
+                    classificacao.setText("Excesso de peso");
                     classificacao.setTextColor(Color.parseColor("#5204BF"));
 
                 } else if (imc >= 30 && imc <= 35) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade\"");
+                    classificacao.setText("Obesidade");
                     classificacao.setTextColor(Color.parseColor("#F2B705"));
+
                 } else {
-                    classificacao.setText("Seu IMC foi classificado como: \"Super Obesidade\"");
+                    classificacao.setText("Super Obesidade");
                     classificacao.setTextColor(Color.parseColor("#A6032F"));
                 }
             }

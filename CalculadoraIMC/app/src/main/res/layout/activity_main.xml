@@ -29,16 +29,16 @@
         android:id="@+id/txtAltura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:height="50dp"
         android:ems="10"
         android:hint="Digite a sua altura"
         android:inputType="number|numberDecimal"
-        android:textColorHint="#CD000000"
+        android:textColorHint="#99000000"
         android:textColor="@color/black"
         tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="221dp" />
+        tools:layout_editor_absoluteY="122dp" />
 
     <Button
         android:id="@+id/btnCalcular"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:text="CALCULAR"
+        android:text="Calcular IMC"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="638dp" />
 
@@ -64,9 +64,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
+        android:textAlignment="center"
         android:text="Valor IMC"
-        android:textSize="30sp"
         android:textColor="#000000"
+        android:textSize="30sp"
         tools:layout_editor_absoluteX="76dp"
         tools:layout_editor_absoluteY="495dp" />
 
@@ -75,6 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Classificação do IMC"
@@ -86,6 +88,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:text="Ver tabela" />
+        android:text="Consultar tabela IMC" />
 
 </LinearLayout>
