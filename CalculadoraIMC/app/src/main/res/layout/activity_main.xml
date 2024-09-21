@@ -20,7 +20,8 @@
         android:ems="10"
         android:hint="Digite o seu peso"
         android:inputType="number|numberDecimal"
-        android:textColorHint="#9A000000"
+        android:textColorHint="#99000000"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="186dp"
         tools:layout_editor_absoluteY="122dp" />
 
@@ -29,12 +30,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:height="50dp"
         android:ems="10"
         android:hint="Digite a sua altura"
         android:inputType="number|numberDecimal"
-        android:textColorHint="#9A000000"
+        android:textColorHint="#CD000000"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="186dp"
         tools:layout_editor_absoluteY="221dp" />
 
@@ -43,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="CALCULAR"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="638dp" />
@@ -53,7 +55,7 @@
         android:layout_width="252dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
         app:srcCompat="@drawable/formula_imc" />
 
     <TextView
@@ -61,9 +63,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="5dp"
         android:text="Valor IMC"
-        android:textSize="48sp"
+        android:textSize="30sp"
+        android:textColor="#000000"
         tools:layout_editor_absoluteX="76dp"
         tools:layout_editor_absoluteY="495dp" />
 
@@ -72,7 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Classificação do IMC"
         android:textSize="24sp" />
@@ -82,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="Ver tabela" />
 
 </LinearLayout>

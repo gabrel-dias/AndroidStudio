@@ -1,7 +1,10 @@
 package com.tecdias.calculadoraimc;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -38,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
         resultadoIMC.setVisibility(View.INVISIBLE);
         Button btnTabela = findViewById(R.id.btnTabela);
         btnTabela.setVisibility(View.INVISIBLE);
+
         botaoCalculo.setOnClickListener(new View.OnClickListener() {
-            double imc;
+            int imc;
             double altura;
             double peso;
 
@@ -48,10 +52,9 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     altura = Double.parseDouble(txtAltura.getText().toString());
                     peso = Double.parseDouble(txtPeso.getText().toString());
-                    imc = peso / (Math.pow(altura, 2));
-                    DecimalFormatSymbols virgula = new DecimalFormatSymbols(new Locale("pt", "BR"));
-                    DecimalFormat formatador = new DecimalFormat("#,##0.00", virgula);
-                    resultadoIMC.setText(formatador.format(imc));
+                    imc = (int) Math.floor(peso / (Math.pow(altura, 2)));
+
+                    resultadoIMC.setText(Integer.toString(imc));
                     resultadoIMC.setVisibility(View.VISIBLE);
                 } catch (NumberFormatException e) {
                     resultadoIMC.setVisibility(View.VISIBLE);
@@ -66,18 +69,26 @@ public class MainActivity extends AppCompatActivity {
                     btnTabela.setVisibility(View.VISIBLE);
                 }
 
-                if (imc <= 18.5d) {
+                // condicionais para classificação do IMC
+                if (imc <= 18) {
                     classificacao.setText("Seu IMC foi classificado como: \"Baixo peso\"");
-                } else if (imc > 18.d && imc <= 24.9d) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Eutrofia (peso adequado)\"");
-                } else if (imc > 25d && imc <= 29.d) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Sobrepeso\"");
-                } else if (imc > 30d && imc <= 34.9) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 1\"");
-                } else if (imc > 35d && imc <= 39.9d) {
-                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Grau 2\"");
-                } else
-                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade Extrema\"");
+                    classificacao.setTextColor(Color.parseColor("#63CAF2"));
+
+                } else if (imc >= 20 && imc <= 24) {
+                    classificacao.setText("Seu IMC foi classificado como: \"Peso Normal\"");
+                    classificacao.setTextColor(Color.parseColor("#3098F2"));
+
+                } else if (imc >= 25 && imc <= 29) {
+                    classificacao.setText("Seu IMC foi classificado como: \"Excesso de peso\"");
+                    classificacao.setTextColor(Color.parseColor("#5204BF"));
+
+                } else if (imc >= 30 && imc <= 35) {
+                    classificacao.setText("Seu IMC foi classificado como: \"Obesidade\"");
+                    classificacao.setTextColor(Color.parseColor("#F2B705"));
+                } else {
+                    classificacao.setText("Seu IMC foi classificado como: \"Super Obesidade\"");
+                    classificacao.setTextColor(Color.parseColor("#A6032F"));
+                }
             }
         });
         btnTabela.setOnClickListener(new View.OnClickListener() {
