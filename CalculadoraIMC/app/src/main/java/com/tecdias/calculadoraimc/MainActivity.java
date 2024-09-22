@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             double peso;
 
             @Override
+            // tratamento de exceção para garantir que o programa continue rodando e prevenindo seu encerramento caso um dos campos esteja vazio
             public void onClick(View v) {
                 try {
                     altura = Double.parseDouble(txtAltura.getText().toString());
@@ -50,19 +51,20 @@ public class MainActivity extends AppCompatActivity {
                     resultadoIMC.setText("Seu IMC é: " + Integer.toString(imc));
                     resultadoIMC.setVisibility(View.VISIBLE);
                 } catch (NumberFormatException e) {
-                    resultadoIMC.setVisibility(View.VISIBLE);
                     resultadoIMC.setText("Por favor, preencha os dois campos acima!");
+                    resultadoIMC.setVisibility(View.VISIBLE);
                 }
-                // verifica se algum dos campos ficou vazio, se sim a classificação do IMC não ficará visível na
+                // verifica se algum dos campos ficou vazio, se sim a classificação do IMC não ficará visível
                 if (altura == 0 || peso == 0) {
                     classificacao.setVisibility(View.INVISIBLE);
 
                 } else {
                     classificacao.setVisibility(View.VISIBLE);
+                    // aparece um botão para chamar uma nova activity com a foto de uma tabela classificando o IMC
                     btnTabela.setVisibility(View.VISIBLE);
                 }
 
-                // condicionais para classificação do IMC
+                // condicionais para classificação do IMC e colocando uma cor em cada situação
                 if (imc <= 18) {
                     classificacao.setText("Baixo peso");
                     classificacao.setTextColor(Color.parseColor("#63CAF2"));
@@ -85,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // chamda do botão que mostra a tabela com a classificação do IMC
         btnTabela.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
