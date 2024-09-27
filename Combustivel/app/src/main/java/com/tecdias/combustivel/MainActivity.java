@@ -77,5 +77,24 @@ public class Main
 	}
 }
 
-https://meubolsoemdia.com.br/calculadora-alcool-gasolina
+========DICA COPILOT=========
+double alcool = 0;
+double gasolina = 0;
+
+String alcoolText = editAlcool.getText().toString();
+String gasolinaText = editGasolina.getText().toString();
+
+if (alcoolText.isEmpty()) {
+    System.out.println("Digite o preço do álcool!");
+} else if (gasolinaText.isEmpty()) {
+    System.out.println("Digite o preço da gasolina!");
+} else {
+    try {
+        alcool = Double.parseDouble(alcoolText);
+        gasolina = Double.parseDouble(gasolinaText);
+    } catch (NumberFormatException e) {
+        System.out.println("Por favor, insira valores numéricos válidos!");
+    }
+}
+
  */
