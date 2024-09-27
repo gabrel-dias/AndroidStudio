@@ -15,6 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
         app:srcCompat="@drawable/combustivel" />
 
@@ -25,6 +26,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:text="Qual a melhor opção?"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <EditText
@@ -58,6 +60,17 @@
 
     <TextView
         android:id="@+id/textResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textSize="26dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textAviso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
