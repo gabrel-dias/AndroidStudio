@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 String stringGasolina = editGasolina.getText().toString();
                 double alcool = 0;
                 double gasolina = 0;
-
+                double resultado = 0;
 
                 /* verificações dos campos individualmente
                  if (stringGasolina.isEmpty() && stringAlcool.isEmpty()) {
@@ -55,17 +55,20 @@ public class MainActivity extends AppCompatActivity {
                     alcool = Double.parseDouble(stringAlcool);
                     gasolina = Double.parseDouble(stringGasolina);
                 } catch (NumberFormatException e) {
-                    textAviso.setText("Os dois campos precisam de valores para calcular o combustível ideal");
+                    if (stringAlcool.isEmpty()) {
+                        textAviso.setText("Digite o valor no campo do álcool");
+                    } else if (stringGasolina.isEmpty()) {
+                        textAviso.setText("Digite o valor no campo da gasolina");
+                    }
                 }
+                resultado = alcool / gasolina;
 
-                double resultado = alcool / gasolina;
-                if (resultado==0){
-                    System.out.println("Os campos estão vazios!");
-                }
-                else if (resultado < 0.7) {
+
+                if (resultado < 0.7) {
                     System.out.println("Vale a pena usar alcool!");
                 } else if (resultado > 0.7)
                     System.out.println("Vale a pena usar gasolina!");
+
 
             }
         });
