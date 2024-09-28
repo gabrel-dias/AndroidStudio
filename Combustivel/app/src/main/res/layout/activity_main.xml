@@ -36,7 +36,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="Litro alcool"
+        android:hint="Valor do litro de álcool"
         android:inputType="numberDecimal" />
 
     <EditText
@@ -46,7 +46,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="Litro gasolina"
+        android:hint="Valor do litro da gasolina"
         android:inputType="numberDecimal" />
 
     <Button
@@ -66,8 +66,7 @@
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
         android:text="TextView"
-        android:textSize="26dp"
-        android:visibility="invisible" />
+        android:textSize="26dp" />
 
     <TextView
         android:id="@+id/textAviso"
@@ -76,7 +75,6 @@
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:text="TextView"
-        android:textSize="20sp"
-        android:visibility="invisible" />
+        android:textSize="20sp" />
 </LinearLayout>
 
