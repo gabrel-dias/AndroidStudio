@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#05CCAE"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#05CCAE"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -66,8 +66,7 @@
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
         android:text="TextView"
-        android:textSize="26dp"
-        android:visibility="invisible" />
+        android:textSize="26dp" />
 
     <TextView
         android:id="@+id/textAviso"
@@ -76,7 +75,6 @@
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:text="TextView"
-        android:textSize="20sp"
-        android:visibility="invisible" />
+        android:textSize="20sp" />
 </LinearLayout>
 
