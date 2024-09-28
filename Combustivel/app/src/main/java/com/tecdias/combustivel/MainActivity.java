@@ -34,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
         botaoCalculo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                textAviso.setVisibility(View.INVISIBLE);
+                textResultado.setVisibility(View.INVISIBLE);
                 String stringAlcool = editAlcool.getText().toString();
                 String stringGasolina = editGasolina.getText().toString();
                 double alcool = 0;
                 double gasolina = 0;
-                double resultado = 0;
+                double resultado;
 
                 /* verificações dos campos individualmente
                  if (stringGasolina.isEmpty() && stringAlcool.isEmpty()) {
@@ -56,19 +58,29 @@ public class MainActivity extends AppCompatActivity {
                     gasolina = Double.parseDouble(stringGasolina);
                 } catch (NumberFormatException e) {
                     if (stringAlcool.isEmpty()) {
+                        textAviso.setVisibility(View.VISIBLE);
                         textAviso.setText("Digite o valor no campo do álcool");
                     } else if (stringGasolina.isEmpty()) {
+                        textAviso.setVisibility(View.VISIBLE);
                         textAviso.setText("Digite o valor no campo da gasolina");
                     }
                 }
+                textAviso.setVisibility(View.INVISIBLE);
                 resultado = alcool / gasolina;
 
-
-                if (resultado < 0.7) {
-                    System.out.println("Vale a pena usar alcool!");
-                } else if (resultado > 0.7)
-                    System.out.println("Vale a pena usar gasolina!");
-
+                if (resultado <= 0.7) {
+                    textResultado.setVisibility(View.VISIBLE);
+                    textResultado.setText("Vale a pena usar alcool!");
+                    if (stringAlcool.isEmpty() || stringGasolina.isEmpty()) {
+                        textResultado.setVisibility(View.INVISIBLE);
+                    }
+                } else {
+                    textResultado.setVisibility(View.VISIBLE);
+                    textResultado.setText("Vale a pena usar gasolina!");
+                    if (stringAlcool.isEmpty() || stringGasolina.isEmpty()) {
+                        textResultado.setVisibility(View.INVISIBLE);
+                    }
+                }
 
             }
         });
