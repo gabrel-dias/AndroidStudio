@@ -59,9 +59,12 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 double resultado = alcool / gasolina;
-                if (resultado < 0.7) {
+                if (resultado==0){
+                    System.out.println("Os campos estão vazios!");
+                }
+                else if (resultado < 0.7) {
                     System.out.println("Vale a pena usar alcool!");
-                } else
+                } else if (resultado > 0.7)
                     System.out.println("Vale a pena usar gasolina!");
 
             }
