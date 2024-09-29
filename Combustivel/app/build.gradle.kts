@@ -10,7 +10,7 @@ android {
         applicationId = "com.tecdias.combustivel"
         minSdk = 24
         targetSdk = 34
-        versionName = "2.4"
+        versionName = "3.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
