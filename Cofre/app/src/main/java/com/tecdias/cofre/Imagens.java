@@ -50,7 +50,7 @@ public class Imagens extends AppCompatActivity {
             R.drawable.i39,
             R.drawable.i40,
             R.drawable.i41,
-            R.drawable.i42,
+            R.drawable.i42
     };
 
     @Override
