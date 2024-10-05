@@ -32,27 +32,41 @@ public class MainActivity extends AppCompatActivity {
     TextView credencial = findViewById(R.id.txtAcesso);
     Button entrar = findViewById(R.id.btnEntrar);
 
+    // atribuiindo credenciais padrão para login
     String admin = "root";
     String password = "root";
+    // elementos que ficarão invisíveis até que as credenciais digitadas sejam válidas
     credencial.setVisibility(View.INVISIBLE);
     entrar.setVisibility(View.INVISIBLE);
 
     login.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+    // coleta o texto que foi digitado nos campos de login
     String usuarioString = usuario.getText().toString();
     String senhaString = senha.getText().toString();
+
             if (admin.equals(usuarioString) && password.equals(senhaString)) {
+                // executado apenas se os dois campos estiverem corretos com as credencias pré definidas
+                // e também mostra os elementos desbloqueados com o login válido
                 credencial.setVisibility(View.VISIBLE);
                 credencial.setText("Acesso liberado!");
                 entrar.setVisibility(View.VISIBLE);
+                // troca a imagem para um cadeado destrancado
                 cadeado.setImageResource(R.drawable.destrancado);
             } else{
+                // caso um dos campos estejam errados, o botão para tela seguinte não é liberado
+                // e o resultado das credenciais digitadas é mostrado
                 credencial.setVisibility(View.VISIBLE);
                 credencial.setText("Acesso negado!");
                 entrar.setVisibility(View.INVISIBLE);
-
             }
+        }
+    });
+    entrar.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            // implementar biblioteca de gatos aqui
         }
     });
     }
