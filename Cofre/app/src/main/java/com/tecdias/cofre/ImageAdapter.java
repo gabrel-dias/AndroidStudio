@@ -34,13 +34,14 @@ public class ImageAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
-        if (convertView ==null){
+        if (convertView == null) {
             imageView = new ImageView(context);
             imageView.setLayoutParams(new ViewGroup.LayoutParams(300, 300));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         } else {
-            imageView=(ImageView) convertView;
-        } imageView.setImageResource(imageIds[position]);
+            imageView = (ImageView) convertView;
+        }
+        imageView.setImageResource(imageIds[position]);
         return imageView;
     }
 }

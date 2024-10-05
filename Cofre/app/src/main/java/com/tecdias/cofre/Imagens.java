@@ -2,12 +2,13 @@ package com.tecdias.cofre;
 
 import android.os.Bundle;
 import android.widget.GridView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Imagens extends AppCompatActivity {
 
-    // IDs referentes as imagens do grid
-    int[] imageIds= {
+    // id das imagens do grid
+    int[] imageIds = {
             R.drawable.i1,
             R.drawable.i2,
             R.drawable.i3,
@@ -57,8 +58,7 @@ public class Imagens extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imagens);
 
-        // Inicializando o GridView
-GridView gridView = findViewById(R.id.gridFotos);
+        GridView gridView = findViewById(R.id.gridFotos);
         // Configurando o adaptador para o GridView
         ImageAdapter imageAdapter = new ImageAdapter(this, imageIds);
         gridView.setAdapter(imageAdapter);
