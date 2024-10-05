@@ -32,7 +32,28 @@ public class MainActivity extends AppCompatActivity {
     TextView credencial = findViewById(R.id.txtAcesso);
     Button entrar = findViewById(R.id.btnEntrar);
 
+    String admin = "root";
+    String password = "root";
     credencial.setVisibility(View.INVISIBLE);
     entrar.setVisibility(View.INVISIBLE);
+
+    login.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+    String usuarioString = usuario.getText().toString();
+    String senhaString = senha.getText().toString();
+            if (admin.equals(usuarioString) && password.equals(senhaString)) {
+                credencial.setVisibility(View.VISIBLE);
+                credencial.setText("Acesso liberado!");
+                entrar.setVisibility(View.VISIBLE);
+                cadeado.setImageResource(R.drawable.destrancado);
+            } else{
+                credencial.setVisibility(View.VISIBLE);
+                credencial.setText("Acesso negado!");
+                entrar.setVisibility(View.INVISIBLE);
+
+            }
+        }
+    });
     }
 }

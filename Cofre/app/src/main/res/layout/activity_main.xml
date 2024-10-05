@@ -46,7 +46,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="200dp"
-        android:backgroundTint="@color/white"
         android:text="Checar credenciais"
         android:textColor="@color/black" />
 
@@ -65,8 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/white"
         android:text="Entrar no cofre"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black" />
 
 </LinearLayout>
