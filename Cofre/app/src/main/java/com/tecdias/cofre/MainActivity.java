@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     // caso um dos campos estejam errados, o botão para tela seguinte não é liberado
                     // e o resultado das credenciais digitadas é mostrado
+                    cadeado.setImageResource(R.drawable.trancado);
                     credencial.setVisibility(View.VISIBLE);
                     credencial.setText("Acesso negado!");
                     entrar.setVisibility(View.INVISIBLE);

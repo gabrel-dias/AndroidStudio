@@ -3,11 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fundoazul"
     android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Você abriu o cofre!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
     <GridView
         android:id="@+id/gridFotos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="3"/>
+        android:layout_width="263dp"
+        android:layout_height="667dp"
+        android:layout_gravity="center"
+        android:focusable="auto"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="20dp" />
 </LinearLayout>
