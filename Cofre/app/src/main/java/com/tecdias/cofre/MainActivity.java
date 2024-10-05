@@ -1,9 +1,12 @@
 package com.tecdias.cofre;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -66,8 +69,9 @@ public class MainActivity extends AppCompatActivity {
     entrar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            // implementar biblioteca de gatos aqui
-        }
+            // mostrar biblioteca de gatos aqui
+            Intent intent = new Intent(MainActivity.this, Imagens.class);
+            startActivity(intent);        }
     });
     }
 }

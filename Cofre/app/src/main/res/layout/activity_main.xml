@@ -66,5 +66,4 @@
         android:layout_gravity="center_horizontal"
         android:text="Entrar no cofre"
         android:textColor="@color/black" />
-
 </LinearLayout>
